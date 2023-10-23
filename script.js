@@ -109,17 +109,6 @@ nextBtn.addEventListener('click', () => {
   updateCurrentText();
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log(cardsEl);
-
-=======
->>>>>>> 66b67c5 (primer commit)
-=======
->>>>>>> 66b67c5 (primer commit)
-=======
->>>>>>> 66b67c5 (primer commit)
 // Prev button
 prevBtn.addEventListener('click', () => {
   cardsEl[currentActiveCard].className = 'card right';
