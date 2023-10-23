@@ -110,8 +110,11 @@ nextBtn.addEventListener('click', () => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(cardsEl);
 
+=======
+>>>>>>> 66b67c5 (primer commit)
 =======
 >>>>>>> 66b67c5 (primer commit)
 // Prev button
