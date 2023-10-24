@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // localStorage.setItem('data', JSON.stringify({name: 'John'}));
+        // const data = JSON.parse(localStorage.getItem('data'));
+        // console.log(data.name);
+        localStorage.setItem('peliculas', 
+            JSON.stringify([
+                {
+                nombre: 'El señor de los anillos',
+                genero: 'Fantasia'
+                },
+                {
+                nombre: 'Harry Potter',
+                genero: 'Fantasia'
+                },
+                {
+                nombre: 'Spiderman',
+                genero: 'Accion'
+                }
+            ])
+        );
+        const data = JSON.parse(localStorage.getItem('peliculas'));
+        console.log(data[1]);
+    </script>
+</body>
+</html>

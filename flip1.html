@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100vw;
+        height: 100vh;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        perspective: 500px;
+        padding: 10px;
+    }
+    .flip-card-inner{
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+    }
+    .card:hover .flip-card-inner{
+        transform: rotateY(180deg);
+    }
+    .front, .back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+    .front{
+        background-color: red;
+    }
+    .back{
+        background-color: rgb(0, 255, 13);
+        transform: rotateY(180deg);
+    }
+</style>
+<body>
+    <div class="container"></div>
+    <script>
+        const containerEl = document.querySelector('.container');
+        function createCard(){
+            const cardEl = document.createElement('div');
+            cardEl.classList.add('card');
+            const flipCardInnerEl = document.createElement('div');
+            flipCardInnerEl.classList.add('flip-card-inner');
+            cardEl.appendChild(flipCardInnerEl);
+            const frontEl = document.createElement('div');
+            frontEl.classList.add('front');
+            const backEl = document.createElement('div');
+            backEl.classList.add('back');
+            flipCardInnerEl.appendChild(frontEl);
+            flipCardInnerEl.appendChild(backEl);
+            containerEl.appendChild(cardEl);
+        }
+        for (let i = 0; i < 10; i++) {
+            createCard();
+        }
+    </script>
+</body>
+</html>

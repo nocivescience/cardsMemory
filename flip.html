@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100vw;
+        height: 100vh;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        perspective: 400px;
+    }
+    .flip-card-inner{
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+    }
+    .card:hover .flip-card-inner{
+        transform: rotateY(180deg);
+    }
+    .front, .back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+    .front{
+        background-color: red;
+    }
+    .back{
+        background-color: rgb(0, 255, 13);
+        transform: rotateY(180deg);
+    }
+</style>
+<body>
+    <div class="container" id="container">
+        <div class="card">
+            <div class="flip-card-inner">
+                <div class="front">Front</div>
+                <div class="back">Back</div>
+            </div>
+        </div>
+    </div>    
+    <script>
+
+    </script>
+</body>
+</html>
