@@ -109,6 +109,8 @@ nextBtn.addEventListener('click', () => {
   updateCurrentText();
 });
 
+console.log(cardsEl);
+
 // Prev button
 prevBtn.addEventListener('click', () => {
   cardsEl[currentActiveCard].className = 'card right';
